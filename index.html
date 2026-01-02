@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cait's Nail Studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Cait's Nail Studio</h1>
+  <p>Luxury Nails & Professional Tutorials</p>
+</header>
+
+<section id="shop">
+  <h2>Shop Products</h2>
+
+  <!-- Featured Slider -->
+  <div class="slider">
+    <div class="slides">
+      <!-- Bundle Slide -->
+      <div class="slide card">
+        <div class="best-value">Best Value!</div>
+        <h3>All-in-One Nail Mastery Bundle</h3>
+        <div class="save-label">Save $36 compared to buying individually!</div>
+        <p>Learn everything in one complete package! Get all 6 courses (PDF + Video) covering Nail Prep, E-File, and Nail Application techniques. Perfect for DIY nail lovers or aspiring professionals who want step-by-step guidance without paying salon prices. Save money and get the full set for one discounted price.</p>
+        <p><strong>Price:</strong> $99</p>
+        <a class="btn" href="https://buy.stripe.com/bJe6oH0889O432m0FueEo0a" target="_blank">Buy Bundle</a>
+      </div>
+
+      <!-- Monthly Subscription Slide -->
+      <div class="slide card">
+        <h3>Cait’s Nail Art Club – Monthly Subscription</h3>
+        <p>Access exclusive monthly nail art tutorials with step-by-step videos. Perfect for beginners and professionals alike!</p>
+        <p><strong>Price:</strong> $20/month</p>
+        <a class="btn" href="https://buy.stripe.com/dRmeVd8EE4tK5audsgeEo03" target="_blank">Subscribe</a>
+      </div>
+    </div>
+
+    <span class="prev" onclick="plusSlides(-1)">&#10094;</span>
+    <span class="next" onclick="plusSlides(1)">&#10095;</span>
+  </div>
+
+  <!-- Nail Product Guide -->
+  <div class="card">
+    <h3>Nail Product Guide – Shop My Favorite Tools</h3>
+    <p>Get my complete list of must-have nail products with direct links to my Amazon storefront. Everything I use in my tutorials is included!</p>
+    <p><strong>Price:</strong> Free</p>
+    <a class="btn" href="https://buy.stripe.com/28EeVd3kkaS8gTc87WeEo01" target="_blank">Buy Now</a>
+  </div>
+
+  <!-- PDF Guides Section -->
+  <h2>PDF Guides</h2>
+  <div class="product-grid">
+    <div class="card">
+      <div class="individual-save">Buy individually: $15</div>
+      <h4>Nail Prep Mastery – PDF Guide</h4>
+      <p>Learn everything you need to prep nails like a pro. Covers nail anatomy, sanitation, cuticle care, filing, and buffing.</p>
+      <a class="btn" href="https://buy.stripe.com/9B66oH5ss2lCbyS5ZOeEo04" target="_blank">Buy Now</a>
+    </div>
+    <div class="card">
+      <div class="individual-save">Buy individually: $15</div>
+      <h4>E-File Essentials – PDF Guide</h4>
+      <p>Everything you need to know about safely using an electric file. Techniques for natural nails and gel, plus safety tips.</p>
+      <a class="btn" href="https://buy.stripe.com/8x29AT2gg7FWauObk8eEo06" target="_blank">Buy Now</a>
+    </div>
+    <div class="card">
+      <div class="individual-save">Buy individually: $15</div>
+      <h4>Nail Application Mastery – PDF Guide</h4>
+      <p>Master the application of polish and gel. Covers preparation, layering, curing, finishing, and troubleshooting common mistakes.</p>
+      <a class="btn" href="https://buy.stripe.com/8x26oHf326BSgTcdsgeEo08" target="_blank">Buy Now</a>
+    </div>
+  </div>
+
+  <!-- Video Tutorials Section -->
+  <h2>Video Tutorials</h2>
+  <div class="product-grid">
+    <div class="card">
+      <div class="individual-save">Buy individually: $30</div>
+      <h4>Nail Prep Mastery – Video Course</h4>
+      <p>Step-by-step video lessons covering all aspects of nail prep. Master cuticle care, filing, buffing, and preparing nails for polish or gel.</p>
+      <a class="btn" href="https://buy.stripe.com/cNi9AT6wwaS81Yi5ZOeEo05" target="_blank">Buy Now</a>
+    </div>
+    <div class="card">
+      <div class="individual-save">Buy individually: $30</div>
+      <h4>E-File Essentials – Video Course</h4>
+      <p>Step-by-step video lessons on proper e-file use. Learn speed, pressure, and technique to achieve smooth results without damaging nails.</p>
+      <a class="btn" href="https://buy.stripe.com/7sY28rbQQbWccCWcoceEo07" target="_blank">Buy Now</a>
+    </div>
+    <div class="card">
+      <div class="individual-save">Buy individually: $30</div>
+      <h4>Nail Application Mastery – Video Course</h4>
+      <p>Step-by-step video instruction on professional nail application techniques. Watch demonstrations on gel and polish applications, plus tips for flawless results.</p>
+      <a class="btn" href="https://buy.stripe.com/00wcN54oo5xO5augEseEo09" target="_blank">Buy Now</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- Booking Section -->
+<section id="booking">
+  <h2>Book an Appointment</h2>
+  <div class="calendly-inline-widget" data-url="https://calendly.com/caitlinruth4" style="min-width:320px;height:700px;"></div>
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</section>
+
+<footer>
+  <p>&copy; 2026 Cait's Nail Studio</p>
+</footer>
+
+<!-- Slider JS -->
+<script>
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(index){
+  if(index >= slides.length) slideIndex = 0;
+  if(index < 0) slideIndex = slides.length -1;
+  slides.forEach((s,i)=> s.style.transform = `translateX(-${slideIndex * 100}%)`);
+}
+
+function plusSlides(n){
+  slideIndex += n;
+  showSlide(slideIndex);
+}
+
+// Auto slide every 5 seconds
+setInterval(()=>{ plusSlides(1); },5000);
+</script>
+
+</body>
+</html>
