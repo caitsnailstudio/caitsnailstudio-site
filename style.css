@@ -1,0 +1,230 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Great+Vibes&display=swap');
+
+/* Global Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #111;
+}
+
+header, footer {
+  text-align: center;
+  padding: 25px 20px;
+  background: #ffffff;
+  color: #111;
+  border-bottom: 1px solid #eee;
+}
+
+header h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  margin: 0;
+  color: #000;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin: 5px 0 0;
+  color: #333;
+}
+
+/* Section Titles */
+h2 {
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  color: #000;
+  font-size: 2rem;
+  margin: 50px 0 20px;
+  border-bottom: 1px solid #eee;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+/* Get to Know Me & Follow Me Section */
+#about-follow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  margin: 40px 15px;
+  padding: 30px;
+}
+
+#about {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+#about img {
+  width: 200px;
+  border-radius: 50%;
+  border: 3px solid #b76e79;
+  margin-bottom: 15px;
+}
+
+#about p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Follow Me Section */
+#follow-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  flex: 0 0 200px;
+  min-width: 180px;
+}
+
+#follow-me h3 {
+  font-family: 'Great Vibes', cursive;
+  color: #b76e79;
+  font-size: 1.5rem;
+}
+
+#follow-me .social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+#follow-me .social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #b76e79;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  position: relative;
+}
+
+/* Tiny bow on icons */
+#follow-me .social-icons a::before {
+  content: "🎀";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  font-size: 0.9rem;
+}
+
+#follow-me .social-icons a:hover {
+  transform: scale(1.15);
+  filter: brightness(1.2);
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Bundle Badge */
+.best-value {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #b76e79; /* rose gold */
+  color: white;
+  padding: 6px 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin: 30px 20px 50px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  margin-top: 12px;
+  background: #b76e79; /* rose gold button */
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+.btn:hover {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+}
+
+/* Sections */
+#shop, #booking {
+  border-radius: 12px;
+  margin: 40px 15px;
+  padding: 30px;
+  background: #fafafa;
+  border: 1px solid #eee;
+}
+
+/* Booking */
+#booking .book-card {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 25px;
+  border: 2px solid #b76e79;
+  border-radius: 15px;
+  background: #fff;
+  text-align: center;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+#booking .book-card:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+#booking .book-card a {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #b76e79;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 12px;
+}
+
+/* Footer */
+footer {
+  padding: 25px;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #555;
+  border-top: 1px solid #eee;
+}
+
+/* Responsive */
+@media(max-width:800px){
+  #about-follow { flex-direction: column; align-items: center; }
+  #follow-me { flex-direction: row; justify-content: center; gap: 20px; }
+  .product-grid { grid-template-columns: 1fr; }
+}
