@@ -1,0 +1,114 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Poppins:wght@600&display=swap');
+
+/* Global Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(160deg, #ffe4f0, #e6e6fa);
+  color: #333;
+  overflow-x: hidden;
+}
+
+header, footer {
+  text-align: center;
+  padding: 25px 20px;
+  background: #ff69b4;
+  color: white;
+}
+
+header h1 {
+  font-family: 'Poppins', cursive;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.1rem;
+  margin: 5px 0 0;
+}
+
+/* Section Titles */
+h2 {
+  text-align: center;
+  font-family: 'Poppins', cursive;
+  color: #ff1493;
+  font-size: 2rem;
+  margin: 40px 0 20px;
+  position: relative;
+}
+
+h2::after {
+  content: '✨';
+  display: block;
+  margin: 8px auto 0;
+  font-size: 1.5rem;
+  opacity: 0.6;
+}
+
+/* Cards */
+.card {
+  background: #ffeef8;
+  border-radius: 25px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+
+/* Icons for PDFs and Videos */
+.card.pdf::before {
+  content: '📄💅';
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 1.3rem;
+  opacity: 0.7;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.card.video::before {
+  content: '🎥✨';
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 1.3rem;
+  opacity: 0.7;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.card:hover::before {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+/* Best Value Badge */
+.best-value {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background: #ff1493;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Save Labels */
+.save-label {
+  display: inline-block;
+  background: #32cd32;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  font-size:
